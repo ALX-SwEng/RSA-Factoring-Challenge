@@ -1,26 +1,15 @@
-# Mission
+RSA-Factoring-Challenge README Summary:
 
-We have sniffed an unsecured network and found numbers that are used to encrypt very important documents. It seems that those numbers are not always generated using large enough prime numbers. Your mission should you choose to accept it, is to factorize these numbers as fast as possible before the target fixes this bug on their server - so that we can decode the encrypted documents.
+Mission: Our mission is to intercept data from an insecure network, which includes numerical values used to encrypt sensitive documents.
+These values are not consistently generated with large prime numbers. Your task is to quickly factorize these numbers before the target
+patches this vulnerability, allowing us to decrypt the documents.
 
-##  Factorize all the things!
+Primary Goal: Your main objective is to factorize as many numbers as possible into the product of two smaller numbers.
 
-Factorize as many numbers as possible into a product of two smaller numbers.
+Usage: Use the command factors <file> to factorize natural numbers in a file. Each number should be on a separate line, be greater than 1,
+and have no empty lines or extraneous spaces. The output format should be "n=p*q," and the program must run independently without external
+dependencies. It has a 5-second time limit for execution.
 
-### Usage: factors <file>
-where <file> is a file containing natural numbers to factor.
-One number per line
-You can assume that all lines will be valid natural numbers greater than 1
-You can assume that there will be no empy line, and no space before and after the valid number
-The file will always end with a new line
-Output format: n=p*q
-one factorization per line
-p and q don’t have to be prime numbers
-See example
-You can work on the numbers of the file in the order of your choice
-Your program should run without any dependency: You will not be able to install anything on the machine we will run your program on
-Time limit: Your program will be killed after 5 seconds if it hasn’t finish
-Push all your scripts, source code, etc… to your repository
-we will only run your executable factors
+Compilation: Compile the C function using the command: cc -fPIC -shared -o lib_factors_functions.so factors_functions.c.
 
-Compile C function:
-cc -fPIC -shared -o lib_factors_functions.so factors_functions.c
+Feel free to integrate this README into your project documentation while retaining essential details.
